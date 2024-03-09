@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Tooltip as ReactTooltip } from "react-tooltip";
-import { AppWrapper } from "../../wrapper";
+import { AppWrapper, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 
 import "./Skills.scss";
@@ -86,4 +86,8 @@ const Skills = () => {
     );
 };
 
-export default AppWrapper(Skills, "skills");
+export default AppWrapper(
+    MotionWrap(Skills, "app__skills"),
+    "skills",
+    "app__whitebg"
+    );
